@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--<script src=/static/script.js></script>-->
+  <link rel="stylesheet" type="text/css" href=/static/styles/style.css />
+  <link rel="icon" href=/static/images/cellpose_transparent.png>
+    <title>cellpose</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dropzone@5.9.3/dist/min/dropzone.min.css" type="text/css">
+
+    <style>
+.dropzone{border: 5px dashed lightgreen; margin: 3%; max-width: 400px; max-height: 200px; background-color: #282828;}
+</style>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157670348-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157670348-1');
+    </script>
+    <style>
+      .column{
+        display: inline-block;
+      }
+    </style>
+</head>
+
+<body>
+  <div>
+     <!-- <input type="file" id="input-file" onchange="runSegmentation()"> -->
+     <h1><div><img style="vertical-align:middle; float: left" src=/static/images/cellpose_transparent.png width="65">
+        <span style="font-weight: 700; color: lightgreen; font-size: 28px">cellpose</span><br>
+        <span style="font-weight: 400; color: lightgray; font-size: 18px"> a generalist algorithm for cellular segmentation   </span>
+        <a href="http://www.github.com/mouseland/cellpose" target="_blank">
+        <img style="vertical-align:bottom" src=/static/images/GitHub-Mark-Light-64px.png width="30"></a>
+        <a href="https://www.biorxiv.org/content/10.1101/2020.02.02.931238v1" target="_blank">
+        <img style="vertical-align:bottom" src=/static/images/pdf_logo.png width="30"></a>
+        <a href=/docs target="_blank">
+        <img style="vertical-align:bottom" src=/static/images/tools.png width="30"></a>
+       </div>
+     </h1>
+  </div>
+<hr class="new1">
+
+<div class="footer">
+  carsen stringer & marius pachitariu
+</div>
+<div id="main">
+  Check out full documentation <a href=/docs target="_blank"><span style="color: lightgreen;">here</span></a>.
+  For software advice, check out our topic on <a href="https://forum.image.sc/tag/cellpose"><span style="color: lightgreen;">image.sc</span></a>.
+  Download the Cellpose dataset <a href=/dataset><span style="color: lightgreen;">here</span></a>.
+  <br><br>
+  <span style='font-size:35px;'>&#10024;</span> NEW RELEASE: <a href=""><span style="color: lightgreen">Cellpose-SAM: superhuman generalization for cellular segmentation</span></a> <span style='font-size:35px;'>&#10024;</span><br>
+
+  <br>
+        Try *Cellpose-SAM* by uploading one PNG or JPG <10 MB. Images are resized to a max size of <b>224x224</b> pixels.
+      <form action="/" method="post" class="dropzone" id="myDropzone"
+        enctype="multipart/form-data"></form>
+      <script src="https://cdn.jsdelivr.net/npm/dropzone@5.9.3/dist/min/dropzone.min.js"></script>
+
+      <script>
+        Dropzone.options.myDropzone = {
+          init: function() {
+              
+            this.on("queuecomplete", function(file) {
+            // Called when all files in the queue finish uploading.
+            window.location = "/image";
+            });  // redirect after queue complete
+                // upload queue when button click
+                // custom init code
+          },
+            // click upload options
+          uploadMultiple: false,
+          parallelUploads: 2,
+          paramName: "file", // The name that will be used to transfer the file
+          maxFilesize: 10, // MB
+          acceptedFiles: "image/*",
+          maxFiles: 1,
+          dictDefaultMessage: `Drop files here or click to upload.`, // message display on drop area
+          dictFallbackMessage: "Your browser does not support drag'n'drop file uploads.",
+          dictInvalidFileType: "You can't upload files of this type.",
+          dictFileTooBig: "File is too big {{filesize}}. Max filesize: {{maxFilesize}}MiB.",
+          dictResponseError: "Server error: {{statusCode}}",
+          dictMaxFilesExceeded: "You can't upload any more files.",
+          dictCancelUpload: "Cancel upload",
+          dictRemoveFile: "Remove file",
+          dictCancelUploadConfirmation: "You really want to delete this file?",
+          dictUploadCanceled: "Upload canceled",
+            // custom options code
+        };
+        </script>
+                
+      
+      or click on an example image from our test set:
+      
+
+  <br>
+  <div class="row">
+    
+      <a href=/image/img00.png/0/2/3>
+        <img src=/static/images/img00.png height="200">
+      </a>
+    
+      <a href=/image/img01.png/0/0/0>
+        <img src=/static/images/img01.png height="200">
+      </a>
+    
+      <a href=/image/img02.png/0/2/3>
+        <img src=/static/images/img02.png height="200">
+      </a>
+    
+      <a href=/image/img03.png/0/0/0>
+        <img src=/static/images/img03.png height="200">
+      </a>
+    
+      <a href=/image/img04.png/0/2/3>
+        <img src=/static/images/img04.png height="200">
+      </a>
+    
+      <a href=/image/img05.png/0/0/0>
+        <img src=/static/images/img05.png height="200">
+      </a>
+    
+      <a href=/image/img06.png/0/2/3>
+        <img src=/static/images/img06.png height="200">
+      </a>
+    
+      <a href=/image/img07.png/0/0/0>
+        <img src=/static/images/img07.png height="200">
+      </a>
+    
+      <a href=/image/img08.png/0/0/0>
+        <img src=/static/images/img08.png height="200">
+      </a>
+    
+      <a href=/image/img09.png/0/2/3>
+        <img src=/static/images/img09.png height="200">
+      </a>
+    
+      <a href=/image/img10.png/0/0/0>
+        <img src=/static/images/img10.png height="200">
+      </a>
+    
+      <a href=/image/img11.png/0/2/3>
+        <img src=/static/images/img11.png height="200">
+      </a>
+    
+      <a href=/image/img12.png/0/0/0>
+        <img src=/static/images/img12.png height="200">
+      </a>
+    
+      <a href=/image/img13.png/0/0/0>
+        <img src=/static/images/img13.png height="200">
+      </a>
+    
+      <a href=/image/img14.png/0/0/0>
+        <img src=/static/images/img14.png height="200">
+      </a>
+    
+      <a href=/image/img15.png/0/0/0>
+        <img src=/static/images/img15.png height="200">
+      </a>
+    
+      <a href=/image/img16.png/0/2/3>
+        <img src=/static/images/img16.png height="200">
+      </a>
+    
+      <a href=/image/img17.png/0/0/0>
+        <img src=/static/images/img17.png height="200">
+      </a>
+    
+      <a href=/image/img18.png/0/2/3>
+        <img src=/static/images/img18.png height="200">
+      </a>
+    
+      <a href=/image/img19.png/0/0/0>
+        <img src=/static/images/img19.png height="200">
+      </a>
+    
+      <a href=/image/img20.png/0/2/3>
+        <img src=/static/images/img20.png height="200">
+      </a>
+    
+      <a href=/image/img21.png/0/0/0>
+        <img src=/static/images/img21.png height="200">
+      </a>
+    
+      <a href=/image/img22.png/0/0/0>
+        <img src=/static/images/img22.png height="200">
+      </a>
+    
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href=/static/styles/style.css />
+  <link rel="icon" href=/static/images/cellpose_transparent.png>
+  <title>cellpose</title>
+</head>
+<body>
+
+  <div>
+     <h1><div><img style="vertical-align:middle; float: left" src=/static/images/cellpose_transparent.png width="65">
+        <span style="font-weight: 700; color: lightgreen; font-size: 28px">cellpose</span><br>
+        <span style="font-weight: 400; color: lightgray; font-size: 18px"> a generalist algorithm for cellular segmentation </span>
+        <a href="http://www.github.com/mouseland/cellpose" target="_blank">
+        <img style="vertical-align:bottom" src=/static/images/GitHub-Mark-Light-64px.png width="30"></a>
+        <a href="https://www.biorxiv.org/content/10.1101/2020.02.02.931238v1" target="_blank">
+        <img style="vertical-align:bottom" src=/static/images/pdf_logo.png width="30"></a>
+        <a href=/docs target="_blank">
+        <img style="vertical-align:bottom" src=/static/images/tools.png width="30"></a>
+       </div>
+     </h1>
+  </div>
+  <hr class="new1">
+
+  <div class="footer">
+  carsen stringer & marius pachitariu
+  </div>
+
+  <b>Please read and accept the terms and conditions and enter your email address to 
+    download the cellpose training dataset:</b>
+  <br><br>
+  <div style="background-color:white; color: black; height:600px;width:800px;border:1px solid #ccc;font:14px/14px Arial;overflow:auto;">
+    <br>
+    <b>Howard Hughes Medical Institute</b><br><br>
+      <b>Research Content Terms and Conditions</b><br><br>
+      Please read these Research Content Terms and Conditions (“Terms and Conditions”) carefully before you download or use any images in any format from the cellpose.org website (“Content”), and do not download or use Content if you do not agree with these Terms and Conditions.  The Howard Hughes Medical Institute (“HHMI”, “we”, “us” and “our”) may at any time revise these Terms and Conditions by updating this posting. You are bound by any such revisions and should therefore periodically visit this page to review the then-current Terms and Conditions.
+      <br><br>
+      BY ACCEPTING THESE TERMS AND CONDITIONS, DOWNLOADING THE CONTENT OR USING THE CONTENT, YOU ARE CONFIRMING YOUR AGREEMENT TO BE BOUND BY THESE TERMS AND CONDITIONS <b>INCLUDING THE WARRANTY DISCLAIMERS, LIMITATIONS OF LIABILITY AND TERMINATION PROVISIONS BELOW.</b>  IF ANY OF THESE TERMS AND CONDITIONS OR ANY FUTURE CHANGES ARE UNACCEPTABLE TO YOU, DO NOT DOWNLOAD OR USE THE CONTENT AT THE CELLPOSE.ORG WEBSITE.  BY DOWNLOADING OR USING CONTENT FROM CELLPOSE.ORG YOU ACCEPT AND AGREE TO THESE TERMS AND CONDITIONS WITHOUT ANY RESERVATIONS, MODIFICATIONS, ADDITIONS, OR DELETIONS.  IF YOU DO NOT AGREE TO THESE TERMS AND CONDITIONS, YOU ARE NOT AUTHORIZED TO DOWNLOAD OR USE THE CONTENT.  IF YOU REPRESENT A CORPORATION, PARTNERSHIP, OR OTHER NON-INDIVIDUAL ENTITY, THE PERSON ACCEPTING THESE TERMS AND CONDITIONS ON BEHALF OF THAT ENTITY REPRESENTS AND WARRANTS THAT THEY HAVE ALL NECESSARY AUTHORITY TO BIND THAT ENTITY.<br>
+      
+      <ol>
+          <li> <b>Ownership</b><br>
+              All Content is protected by copyright, and such copyrights and other proprietary rights may be held by individuals or entities other than, or in addition to, us.
+          </li>
+          <li> <b>Use and Restrictions</b><br>
+              The Content is made available for limited non-commercial, educational, research and personal use only, and for fair use as defined under United States copyright laws.  You may download and use Content only for your own non-commercial, educational, research and personal use only, subject to any additional terms or restrictions which may be applicable to an individual file as part of the Content.  Copying or redistribution of the Content in any manner for commercial use, including commercial publication, or for personal gain, or making any other use of the Content beyond that allowed by “fair use,” as such term is understood under the United States Copyright Act and applicable law, is strictly prohibited.  HHMI may terminate these Terms and Conditions, and your right to use the Content at any time upon notice to you (which notice may be to your email address of record with HHMI).  Upon any termination by HHMI, you agree that you will promptly delete all copies of Content and, upon request by HHMI, certify in writing your deletion of all copies of Content.
+          </li>
+          <li> <b>Indemnity</b><br>
+              You agree to indemnify, defend, and hold harmless HHMI and our affiliates, and our trustees, officers, members, directors, employees, representatives and agents from and against all claims, losses, expenses, damages, costs and other liability (including without limitation attorneys’ fees), arising or resulting from your use of the Content (including, without limitation, any copies and derivative works of any Content), or any violation or alleged violation by you of these Terms and Conditions, including for any violation of any applicable law, rule, or regulation.  We reserve the right to assume, at our sole expense, the exclusive defense and control of any matter subject to indemnification by you, in which event you will fully cooperate with us.
+          </li>
+          <li> <b>Disclaimers          </b><br>
+              WE MAKE NO EXPRESS WARRANTIES OR REPRESENTATIONS AS TO THE QUALITY, COMPREHENSIVENESS, AND ACCURACY OF THE CONTENT, AND WE DISCLAIM ANY IMPLIED WARRANTIES OR REPRESENTATIONS, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT, TO THE FULL EXTENT PERMISSIBLE UNDER APPLICABLE LAW.  WE OFFER THE CONTENT ON AN "AS IS” BASIS AND DO NOT ACCEPT RESPONSIBILITY FOR ANY USE OF OR RELIANCE ON THE CONTENT.  IN ADDITION, WE DO NOT MAKE ANY REPRESENTATIONS AS TO THE ACCURACY, COMPREHENSIVENESS, COMPLETENESS, QUALITY, CURRENCY, ERROR-FREE NATURE, COMPATIBILITY, OR FITNESS FOR ANY PARTICULAR PURPOSE OF THE CONTENT.  WE ASSUME NO LIABILITY, AND SHALL NOT BE LIABLE FOR, ANY DAMAGES TO, OR VIRUSES OR OTHER MALWARE THAT MAY AFFECT, YOUR COMPUTER EQUIPMENT OR OTHER PROPERTY AS A RESULT OF YOUR DOWNLOADING OF, AND USE OF, ANY CONTENT.
+          </li>
+          <li> <b>Limitation of Liability          </b><br>
+            TO THE FULLEST EXTENT PERMITTED UNDER APPLICABLE LAW, IN NO EVENT WILL WE, OR ANY OF OUR EMPLOYEES, AGENTS, OFFICERS, OR TRUSTEES, BE LIABLE FOR DAMAGES OF ANY KIND, UNDER ANY LEGAL THEORY, ARISING OUT OF OR IN CONNECTION WITH YOUR USE, OR INABILITY TO USE, THE CONTENT, INCLUDING ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO, LOSS OF REVENUE, LOSS OF PROFITS, LOSS OF BUSINESS OR ANTICIPATED SAVINGS, LOSS OF USE, LOSS OF GOODWILL, LOSS OF DATA, AND WHETHER CAUSED BY TORT (INCLUDING NEGLIGENCE), BREACH OF CONTRACT OR OTHERWISE, EVEN IF FORESEEABLE.  BECAUSE SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR LIMITATION OF LIABLITY FOR CONSEQUENTIAL OR INCIDENTAL DAMAGES, ALL OR A PORTION OF THE ABOVE LIMITATION MAY NOT APPLY TO YOU.
+          </li>
+          <li> <b>General</b><br>
+              If any provision of these Terms and Conditions is held to be invalid, illegal, or unenforceable, then such provision shall be eliminated or limited to the minimum extent such that the remaining provisions of the Terms and Conditions will continue in full force and effect.  All matters relating to and arising from the Content or these Terms and Conditions shall be governed by and construed in accordance with the internal laws of the State of Maryland without giving effect to any choice or conflict of law provision or rule.  If you choose to download or access the Content from locations outside the United States, you do so at your own risk and you are responsible for compliance with any local laws.
+          </li>
+
+      </ol>
+  </div>
+
+  
+  
+  <form method="POST" action="">
+    <input id="csrf_token" name="csrf_token" type="hidden" value="IjhjZTY0MGFkODcyMTFmOTFkZTQxNjMxMDk5MzYwMWJlMWFhZGVkYzEi.aBCRLA.ht8-JqORvXsTS_4lZIz427L5BfU">
+    <p>
+      Please enter your institutional email address: 
+  <input class="form-control" id="email" name="email" type="text" value="">
+  <br>
+    </p>
+    <p>
+      I accept the terms and conditions: 
+  <input class="form-control" id="accept_terms" name="accept_terms" required type="checkbox" value="y">
+   <br>
+    </p>
+      <input id="csrf_token" name="csrf_token" type="hidden" value="IjhjZTY0MGFkODcyMTFmOTFkZTQxNjMxMDk5MzYwMWJlMWFhZGVkYzEi.aBCRLA.ht8-JqORvXsTS_4lZIz427L5BfU">
+    
+    <p>
+      <input id="submit" name="submit" type="submit" value="Accept">
+    </p>
+  </form>
+
+</body>

@@ -1,0 +1,392 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" />
+  <meta name="readthedocs-addons-api-version" content="1"><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>cellpose &mdash; cellpose 3.1.1.1-24-g3864748 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5d0d5553"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <script src="_static/js/versions.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Installation" href="installation.html" /> 
+<script async type="text/javascript" src="/_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="cellpose" /><meta name="readthedocs-version-slug" content="latest" /><meta name="readthedocs-resolver-filename" content="/" /><meta name="readthedocs-http-status" content="200" /></head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: black" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            cellpose
+              <img src="_static/favicon.ico" class="logo" alt="Logo"/>
+          </a>
+              <div class="switch-menus">
+                <div class="version-switch"></div>
+                <div class="language-switch"></div>
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Basics:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gui.html">GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inputs.html">Inputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="settings.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="outputs.html">Outputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="do3d.html">3D segmentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="restore.html">Image Restoration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="train.html">Training</a></li>
+<li class="toctree-l1"><a class="reference internal" href="benchmark.html">Timing + memory usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="distributed.html">Big Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openvino.html">OpenVINO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="notebook.html">In a notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command.html">Command line</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">Cellpose API Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cli.html">Cellpose CLI</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: black" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">cellpose</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">cellpose</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="installation.html" class="btn btn-neutral float-right" title="Installation" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="cellpose">
+<h1>cellpose<a class="headerlink" href="#cellpose" title="Link to this heading"></a></h1>
+<p>cellpose is an anatomical segmentation algorithm written in Python 3
+by Carsen Stringer and Marius Pachitariu. For support, please open
+an <a class="reference external" href="https://github.com/MouseLand/cellpose/issues">issue</a>.</p>
+<p>We make pip installable releases of cellpose, here is the <a class="reference external" href="https://pypi.org/project/cellpose/">pypi</a>. You
+can install it as <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">cellpose[gui]</span></code>.</p>
+<p>You can try it out without installing at <a class="reference external" href="http://www.cellpose.org">cellpose.org</a>.
+Also check out these resources:</p>
+<p>Cellpose3: one-click image restoration for improved cellular segmentation</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.biorxiv.org/content/10.1101/2024.02.10.579780v1">paper</a> on biorxiv</p></li>
+<li><p><a class="reference external" href="https://neuromatch.social/&#64;computingnature/111932247922392030">thread</a></p></li>
+</ul>
+<p>Cellpose 2.0: how to train your own model</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.biorxiv.org/content/10.1101/2022.04.01.486764v1">paper</a> on biorxiv</p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=3ydtAhfq6H0">talk</a></p></li>
+<li><p>twitter <a class="reference external" href="https://twitter.com/marius10p/status/1511415409047650307?s=20&amp;t=umTVIG1CFKIWHYMrQqFKyQ">thread</a></p></li>
+<li><p>human-in-the-loop training protocol <a class="reference external" href="https://youtu.be/3Y1VKcxjNy4">video</a></p></li>
+</ul>
+<p>Cellpose: a generalist algorithm for cellular segmentation</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.biorxiv.org/content/10.1101/2020.02.02.931238v1">paper</a> on biorxiv (see figure 1 below) and in <a class="reference external" href="https://t.co/kBMXmPp3Yn?amp=1">nature methods</a></p></li>
+<li><p>twitter <a class="reference external" href="https://twitter.com/computingnature/status/1224477812763119617">thread</a></p></li>
+<li><p>Marius’s <a class="reference external" href="https://www.youtube.com/watch?v=7y9d4VIKiS8">talk</a></p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/fig1.PNG"><img alt="fig1" class="align-center" src="_images/fig1.PNG" style="width: 1200px;" />
+</a>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Basics:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#built-in-model-directory">Built-in model directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#m1-m3-mac-installation">M1-M3 Mac installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#amd-gpu-rocm-installation">AMD GPU ROCm installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#common-issues">Common issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#dependencies">Dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gui.html">GUI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gui.html#starting-the-gui">Starting the GUI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gui.html#using-the-gui">Using the GUI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gui.html#drawing-masks">Drawing masks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gui.html#bulk-mask-deletion">Bulk Mask Deletion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gui.html#segmentation-options">Segmentation options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gui.html#training-your-own-cellpose-model">Training your own cellpose model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gui.html#contributing-training-data">Contributing training data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gui.html#keyboard-shortcuts">Keyboard shortcuts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="inputs.html">Inputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="settings.html">Settings</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="settings.html#channels">Channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html#diameter">Diameter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html#resample">Resample</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html#flow-threshold">Flow threshold</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html#cellprob-threshold">Cellprob threshold</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html#number-of-iterations-niter">Number of iterations niter</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="outputs.html">Outputs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#in-a-notebook">in a notebook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#seg-npy-output">_seg.npy output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#png-output">PNG output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#native-imagej-roi-archive-output">Native ImageJ ROI archive output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#legacy-imagej-interface-roi-manager-compatible-output-for-imagej">(Legacy ImageJ Interface) ROI manager compatible output for ImageJ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#plotting-functions">Plotting functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="do3d.html">3D segmentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="do3d.html#input-format">Input format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="do3d.html#segmentation-settings">Segmentation settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="do3d.html#training-for-3d-segmentation">Training for 3D segmentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="models.html#full-built-in-models">Full built-in models</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="models.html#cytoplasm-model-cyto3-cyto2-cyto">Cytoplasm model (<code class="docutils literal notranslate"><span class="pre">'cyto3'</span></code>, <code class="docutils literal notranslate"><span class="pre">'cyto2'</span></code>, <code class="docutils literal notranslate"><span class="pre">'cyto'</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.html#nucleus-model-nuclei">Nucleus model (<cite>‘nuclei’</cite>)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="models.html#other-built-in-models">Other built-in models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models.html#user-trained-models">User-trained models</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="models.html#finding-models-on-bioimage-io">Finding models on BioImage.IO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.html#sharing-models-on-bioimage-io">Sharing models on BioImage.IO</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="restore.html">Image Restoration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="restore.html#denoisemodel">DenoiseModel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restore.html#cellposedenoisemodel">CellposeDenoiseModel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restore.html#command-line-usage">Command line usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restore.html#training-your-own-models">Training your own models</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="train.html">Training</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="train.html#cli-training-options">CLI training options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="train.html#re-training-a-model">Re-training a model</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="benchmark.html">Timing + memory usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="distributed.html">Big Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="distributed.html#distributed-cellpose-for-larger-than-memory-data">Distributed Cellpose for larger-than-memory data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="distributed.html#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="openvino.html">OpenVINO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Examples:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="notebook.html">In a notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command.html">Command line</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="command.html#command-line-usage">Command Line Usage</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">Cellpose API Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api.html#cellpose-class">Cellpose class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#cellposemodel">CellposeModel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#cellposedenoisemodel">CellposeDenoiseModel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#denoisemodel">DenoiseModel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#sizemodel">SizeModel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#training">Training</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#metrics">Metrics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#flows-to-masks">Flows to masks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-cellpose.transforms">Image transforms</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api.html#cellpose.transforms.average_tiles"><code class="docutils literal notranslate"><span class="pre">average_tiles()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#cellpose.transforms.convert_image"><code class="docutils literal notranslate"><span class="pre">convert_image()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#cellpose.transforms.gaussian_kernel"><code class="docutils literal notranslate"><span class="pre">gaussian_kernel()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#cellpose.transforms.make_tiles"><code class="docutils literal notranslate"><span class="pre">make_tiles()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#cellpose.transforms.move_axis"><code class="docutils literal notranslate"><span class="pre">move_axis()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#cellpose.transforms.move_min_dim"><code class="docutils literal notranslate"><span class="pre">move_min_dim()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#cellpose.transforms.normalize99"><code class="docutils literal notranslate"><span class="pre">normalize99()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#cellpose.transforms.normalize99_tile"><code class="docutils literal notranslate"><span class="pre">normalize99_tile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#cellpose.transforms.normalize_img"><code class="docutils literal notranslate"><span class="pre">normalize_img()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#cellpose.transforms.pad_image_ND"><code class="docutils literal notranslate"><span class="pre">pad_image_ND()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#cellpose.transforms.random_rotate_and_resize"><code class="docutils literal notranslate"><span class="pre">random_rotate_and_resize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#cellpose.transforms.reshape"><code class="docutils literal notranslate"><span class="pre">reshape()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#cellpose.transforms.resize_image"><code class="docutils literal notranslate"><span class="pre">resize_image()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#cellpose.transforms.resize_safe"><code class="docutils literal notranslate"><span class="pre">resize_safe()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#cellpose.transforms.smooth_sharpen_img"><code class="docutils literal notranslate"><span class="pre">smooth_sharpen_img()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#cellpose.transforms.unaugment_tiles"><code class="docutils literal notranslate"><span class="pre">unaugment_tiles()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#cellpose.transforms.update_axis"><code class="docutils literal notranslate"><span class="pre">update_axis()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#plot-functions">Plot functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#i-o-functions">I/O functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#utils-functions">Utils functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-cellpose.resnet_torch">Network classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api.html#cellpose.resnet_torch.CPnet"><code class="docutils literal notranslate"><span class="pre">CPnet</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.resnet_torch.CPnet.nbase"><code class="docutils literal notranslate"><span class="pre">CPnet.nbase</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.resnet_torch.CPnet.nout"><code class="docutils literal notranslate"><span class="pre">CPnet.nout</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.resnet_torch.CPnet.sz"><code class="docutils literal notranslate"><span class="pre">CPnet.sz</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.resnet_torch.CPnet.residual_on"><code class="docutils literal notranslate"><span class="pre">CPnet.residual_on</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.resnet_torch.CPnet.style_on"><code class="docutils literal notranslate"><span class="pre">CPnet.style_on</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.resnet_torch.CPnet.concatenation"><code class="docutils literal notranslate"><span class="pre">CPnet.concatenation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.resnet_torch.CPnet.conv_3D"><code class="docutils literal notranslate"><span class="pre">CPnet.conv_3D</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.resnet_torch.CPnet.mkldnn"><code class="docutils literal notranslate"><span class="pre">CPnet.mkldnn</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.resnet_torch.CPnet.downsample"><code class="docutils literal notranslate"><span class="pre">CPnet.downsample</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.resnet_torch.CPnet.upsample"><code class="docutils literal notranslate"><span class="pre">CPnet.upsample</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.resnet_torch.CPnet.make_style"><code class="docutils literal notranslate"><span class="pre">CPnet.make_style</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.resnet_torch.CPnet.output"><code class="docutils literal notranslate"><span class="pre">CPnet.output</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.resnet_torch.CPnet.diam_mean"><code class="docutils literal notranslate"><span class="pre">CPnet.diam_mean</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.resnet_torch.CPnet.diam_labels"><code class="docutils literal notranslate"><span class="pre">CPnet.diam_labels</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.resnet_torch.CPnet.device"><code class="docutils literal notranslate"><span class="pre">CPnet.device</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.resnet_torch.CPnet.forward"><code class="docutils literal notranslate"><span class="pre">CPnet.forward()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.resnet_torch.CPnet.load_model"><code class="docutils literal notranslate"><span class="pre">CPnet.load_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.resnet_torch.CPnet.save_model"><code class="docutils literal notranslate"><span class="pre">CPnet.save_model()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#cellpose.resnet_torch.CPnetBioImageIO"><code class="docutils literal notranslate"><span class="pre">CPnetBioImageIO</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.resnet_torch.CPnetBioImageIO.forward"><code class="docutils literal notranslate"><span class="pre">CPnetBioImageIO.forward()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.resnet_torch.CPnetBioImageIO.load_model"><code class="docutils literal notranslate"><span class="pre">CPnetBioImageIO.load_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.resnet_torch.CPnetBioImageIO.load_state_dict"><code class="docutils literal notranslate"><span class="pre">CPnetBioImageIO.load_state_dict()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#cellpose.resnet_torch.batchconvstyle"><code class="docutils literal notranslate"><span class="pre">batchconvstyle</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#cellpose.resnet_torch.downsample"><code class="docutils literal notranslate"><span class="pre">downsample</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#cellpose.resnet_torch.make_style"><code class="docutils literal notranslate"><span class="pre">make_style</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#cellpose.resnet_torch.resdown"><code class="docutils literal notranslate"><span class="pre">resdown</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#cellpose.resnet_torch.resup"><code class="docutils literal notranslate"><span class="pre">resup</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#cellpose.resnet_torch.upsample"><code class="docutils literal notranslate"><span class="pre">upsample</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-cellpose.core">Core functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api.html#cellpose.core.assign_device"><code class="docutils literal notranslate"><span class="pre">assign_device()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#cellpose.core.check_mkl"><code class="docutils literal notranslate"><span class="pre">check_mkl()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#cellpose.core.run_3D"><code class="docutils literal notranslate"><span class="pre">run_3D()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#cellpose.core.run_net"><code class="docutils literal notranslate"><span class="pre">run_net()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#cellpose.core.use_gpu"><code class="docutils literal notranslate"><span class="pre">use_gpu()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-cellpose.models">All models functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api.html#cellpose.models.Cellpose"><code class="docutils literal notranslate"><span class="pre">Cellpose</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.models.Cellpose.device"><code class="docutils literal notranslate"><span class="pre">Cellpose.device</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.models.Cellpose.gpu"><code class="docutils literal notranslate"><span class="pre">Cellpose.gpu</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.models.Cellpose.diam_mean"><code class="docutils literal notranslate"><span class="pre">Cellpose.diam_mean</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.models.Cellpose.cp"><code class="docutils literal notranslate"><span class="pre">Cellpose.cp</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.models.Cellpose.pretrained_size"><code class="docutils literal notranslate"><span class="pre">Cellpose.pretrained_size</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.models.Cellpose.sz"><code class="docutils literal notranslate"><span class="pre">Cellpose.sz</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.models.Cellpose.eval"><code class="docutils literal notranslate"><span class="pre">Cellpose.eval()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#cellpose.models.CellposeModel"><code class="docutils literal notranslate"><span class="pre">CellposeModel</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.models.CellposeModel.diam_mean"><code class="docutils literal notranslate"><span class="pre">CellposeModel.diam_mean</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.models.CellposeModel.builtin"><code class="docutils literal notranslate"><span class="pre">CellposeModel.builtin</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.models.CellposeModel.device"><code class="docutils literal notranslate"><span class="pre">CellposeModel.device</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.models.CellposeModel.mkldnn"><code class="docutils literal notranslate"><span class="pre">CellposeModel.mkldnn</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.models.CellposeModel.nchan"><code class="docutils literal notranslate"><span class="pre">CellposeModel.nchan</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.models.CellposeModel.nclasses"><code class="docutils literal notranslate"><span class="pre">CellposeModel.nclasses</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.models.CellposeModel.nbase"><code class="docutils literal notranslate"><span class="pre">CellposeModel.nbase</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.models.CellposeModel.net"><code class="docutils literal notranslate"><span class="pre">CellposeModel.net</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.models.CellposeModel.pretrained_model"><code class="docutils literal notranslate"><span class="pre">CellposeModel.pretrained_model</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.models.CellposeModel.pretrained_model_ortho"><code class="docutils literal notranslate"><span class="pre">CellposeModel.pretrained_model_ortho</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.models.CellposeModel.backbone"><code class="docutils literal notranslate"><span class="pre">CellposeModel.backbone</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.models.CellposeModel.__init__"><code class="docutils literal notranslate"><span class="pre">CellposeModel.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.models.CellposeModel.eval"><code class="docutils literal notranslate"><span class="pre">CellposeModel.eval()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#id0"><code class="docutils literal notranslate"><span class="pre">CellposeModel.eval()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#cellpose.models.SizeModel"><code class="docutils literal notranslate"><span class="pre">SizeModel</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.models.SizeModel.pretrained_size"><code class="docutils literal notranslate"><span class="pre">SizeModel.pretrained_size</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.models.SizeModel.cp"><code class="docutils literal notranslate"><span class="pre">SizeModel.cp</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.models.SizeModel.device"><code class="docutils literal notranslate"><span class="pre">SizeModel.device</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.models.SizeModel.diam_mean"><code class="docutils literal notranslate"><span class="pre">SizeModel.diam_mean</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#cellpose.models.SizeModel.eval"><code class="docutils literal notranslate"><span class="pre">SizeModel.eval()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#cellpose.models.get_model_params"><code class="docutils literal notranslate"><span class="pre">get_model_params()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cli.html">Cellpose CLI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cli.html#command-line-usage">Command Line Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cli.html#cellpose.cli-get_arg_parser-named-arguments">Named Arguments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cli.html#cellpose.cli-get_arg_parser-hardware-arguments">Hardware Arguments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cli.html#cellpose.cli-get_arg_parser-input-image-arguments">Input Image Arguments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cli.html#cellpose.cli-get_arg_parser-model-arguments">Model Arguments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cli.html#cellpose.cli-get_arg_parser-algorithm-arguments">Algorithm Arguments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cli.html#cellpose.cli-get_arg_parser-output-arguments">Output Arguments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cli.html#cellpose.cli-get_arg_parser-training-arguments">Training Arguments</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, Carsen Stringer &amp; Marius Pachitariu.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
